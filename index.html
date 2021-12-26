@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+  <header>
+    <div class="left-header">
+      <a href="#" class="logo"><img src="images/logo.svg" alt="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+      <ul class="profil">
+        <li class="cart"><span class="cart-item-number">4</span><a href="javascript:void;"><img src="images/icon-cart.svg" alt="cart"></a>  
+        </li>
+        <div class="cart-container">
+          <div class="cart-header">
+            <span>Cart</span>
+          </div>
+            <div class="cart-item">
+              <img class="cart-item-img" src="images/image-product-1-thumbnail.jpg" height="50" alt="product1">
+              <div class="cart-item-info">
+                <span>Fall Edition Limited Sneakers</span>
+                <p><span>$125.00 x 3 </span><strong>$375.00</strong></p>
+              </div>
+              <a href="javascript:void;" class="delete"><img src="images/icon-delete.svg" alt="delete"></a>
+            </div>
+            <div class="btn-container">
+              <a href="#" class="checkout">Checkout</a>
+            </div>
+        </div> 
+        <li><a href="#" class="avatar"><img src="images/image-avatar.png" height="50" alt="avatar"></a></li>
+      </ul>
+  </header>
+  <!-- HERO SECTION -->
+  <main id="hero">
+    <!-- LEFT HERO SECTION -->
+    <div class="left">
+      <div class="carousel-container">
+        <img id="carouselImage" src="images/image-product-1.jpg" alt="carousel-image">
+      </div>
+      <div class="carousel-items">
+        <a href="javascript:void;"><figure class="active"><img src="images/image-product-1-thumbnail.jpg" class="carouselItem active" alt="product1"></figure></a>
+        <a href="javascript:void;"><figure><img src="images/image-product-2-thumbnail.jpg" height="100" class="carouselItem" alt="product2"></figure></a>
+        <a href="javascript:void;"><figure><img src="images/image-product-3-thumbnail.jpg" height="100" class="carouselItem" alt="product3"></figure></a>
+        <a href="javascript:void;"><figure><img src="images/image-product-4-thumbnail.jpg" height="100" class="carouselItem" alt="product4"></figure></a>
+      </div>
+    </div>
+    <!-- RIGHT HERO SECTION -->
+    <div class="right">
+      <p class="company">Sneaker Company</p>
+      <h1 class="title">Fall Limited Edition Sneakers</h1>
+      <p class="text">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="pricing">
+        <p><span class="price">$125.00</span> <span class="reduction">50%</span></p>
+        <p class="old-price">$250.00</p>
+      </div>
+      <div class="checkout">
+        <div class="quantity">
+          <a href="#"><img src="images/icon-minus.svg" alt="minus"></a>
+          <span class="selected">0</span>
+          <a href="#"><img src="images/icon-plus.svg" alt="plus"></a>
+        </div>
+        <a href="#" class="checkout-btn">
+          <img src="images/icon-cart2.svg" alt="cart">
+          <span>Add to cart</span>
+        </a>
+      </div>
+    </div>
+  </main>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
