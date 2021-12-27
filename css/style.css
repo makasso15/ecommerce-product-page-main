@@ -4,7 +4,7 @@
 :root {
     --orange: hsl(26, 100%, 55%);
     --paleOrange: hsl(25, 100%, 94%);
-    --darkBlue: hsl(220, 13%, 13%);
+    --darkBlue: hsl(218, 12%, 13%);
     --darkGrayishBlue: hsl(220, 14%, 75%);
     --lightGrayishBlue: hsl(223, 64%, 98%);
     --white: hsl(0, 0%, 100%);
@@ -211,6 +211,8 @@ nav > ul > li > a:hover {
 .carousel-container img {
     width: 100%;
     border-radius: 10px;
+    cursor: pointer;
+    transition: 0.6s;
 
 }
 
@@ -234,7 +236,8 @@ nav > ul > li > a:hover {
 
 }
 
-.carousel-items > a > figure > img:hover {
+.carousel-items > a > figure > img:hover,
+.carousel-items > a > figure > img.active {
     opacity: 0.45;
     transition: 0.3s;
 }
@@ -347,3 +350,15 @@ nav > ul > li > a:hover {
     margin-right: 1rem;
 }
 
+/** Background **/
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(29, 32, 37, 0.7);
+    z-index: 9999;
+    display: none;
+}
