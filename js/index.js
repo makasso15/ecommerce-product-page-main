@@ -6,13 +6,15 @@ cart.addEventListener('click', function () {
     cart_container.classList.toggle('show');
 });
 
-// Change the image in the hero section
+// Change the image in the hero section and the image in the cart box
 const carouselImage = document.querySelector('#carouselImage');
+let cartItemImg = document.querySelector('.cart-item-img');
 let carouselItem = document.querySelectorAll('.carouselItem');
 
 for (let i = 0; i < carouselItem.length; i++) {
     carouselItem[i].onclick = function () {
         carouselImage.src = carouselItem[i].src;
+        cartItemImg.src = carouselItem[i].src;
         carouselItem[i].parentElement.classList.add('active');
         carouselItem[i].classList.add('active');
         if (carouselImage.src == carouselItem[i].src) {
@@ -51,7 +53,7 @@ function updateCartItem() {
     });
 }
 
-// clear cart 
+// clear the cart 
 function clearCart() {
     let empty = document.querySelector('.empty');
     empty.style.display = "block";
@@ -90,6 +92,7 @@ const decrement = (event) => {
         clearCart();
     }
 }
+// delete all items by clicking the trash btn 
 remove.addEventListener('click', (event) => {
     event.preventDefault();
     let empty = document.querySelector('.empty');
