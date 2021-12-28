@@ -27,7 +27,7 @@
       </nav>
     </div>
       <ul class="profil">
-        <li class="cart"><span class="cart-item-number">4</span><a href="javascript:void;"><img src="images/icon-cart.svg" alt="cart"></a>  
+        <li class="cart"><span class="cart-item-number cartItemNumber">0</span><a href="javascript:void;"><img src="images/icon-cart.svg" alt="cart"></a>  
         </li>
         <div class="cart-container">
           <div class="cart-header">
@@ -37,10 +37,12 @@
               <img class="cart-item-img" src="images/image-product-1-thumbnail.jpg" height="50" alt="product1">
               <div class="cart-item-info">
                 <span>Fall Edition Limited Sneakers</span>
-                <p><span>$125.00 x 3 </span><strong>$375.00</strong></p>
+                <p><span>$125.00 x <span class="cartItemNumber">0</span> </span><strong>$<i id="currentPrice">0</i>.00</strong></p>
               </div>
-              <a href="javascript:void;" class="delete"><img src="images/icon-delete.svg" alt="delete"></a>
+              <a href="javascript:void;" id="remove"><img src="images/icon-delete.svg" alt="delete"></a>
             </div>
+            <span class="empty"></span>
+
             <div class="btn-container">
               <a href="#" class="checkout">Checkout</a>
             </div>
@@ -76,9 +78,9 @@
       </div>
       <div class="checkout">
         <div class="quantity">
-          <a href="#"><img src="images/icon-minus.svg" alt="minus"></a>
+          <a id="minus" href="#"><img src="images/icon-minus.svg" alt="minus"></a>
           <span class="selected">0</span>
-          <a href="#"><img src="images/icon-plus.svg" alt="plus"></a>
+          <a id ="plus" href="#"><img src="images/icon-plus.svg" alt="plus"></a>
         </div>
         <a href="#" class="checkout-btn">
           <img src="images/icon-cart2.svg" alt="cart">
