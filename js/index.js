@@ -37,10 +37,6 @@ let selected = document.querySelector('.selected');
 let cartItemNumber = document.querySelectorAll('.cartItemNumber');
 let currentPrice = document.getElementById('currentPrice');
 
-if (selected.innerHTML == 0) {
-    clearCart();
-}
-
 // update the cart item price
 function updatePrice() {
     currentPrice.innerHTML = parseInt(selected.innerHTML) * 125;
@@ -106,3 +102,4 @@ remove.addEventListener('click', (event) => {
 });
 plus.addEventListener('click', increment);
 minus.addEventListener('click', decrement);
+

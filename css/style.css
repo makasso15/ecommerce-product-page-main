@@ -60,7 +60,7 @@ nav > ul > li::after {
     height: 3px;
     width: 0%;
     left: 0;
-    bottom: -85%;
+    bottom: -65%;
 }
 
 nav > ul > li:hover::after {
@@ -201,7 +201,6 @@ nav > ul > li > a:hover {
 
 #hero {
     display: flex;
-    margin-top:  2rem;
 }
 
 #hero .left {
@@ -210,7 +209,7 @@ nav > ul > li > a:hover {
     flex-direction: column;
     align-items: center;
     max-height: 100%;
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
 
 .carousel-container {

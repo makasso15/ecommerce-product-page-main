@@ -12,7 +12,22 @@
 </head>
 
 <body>
-  <div id="background"></div>
+  <div id="background">
+    <span id="close-btn"><img src="./images/icon-close.svg" alt="close button"></span>
+    <span id="next-btn"><img src="./images/icon-next.svg" alt="next button"></span>
+    <span id="close-btn"><img src="./images/icon-previous.svg" alt="previous button"></span>
+    <div class="left background-container">
+      <div class="carousel-container">
+        <img id="carouselImage" src="images/image-product-1.jpg" alt="carousel-image">
+      </div>
+      <div class="carousel-items">
+        <a href="javascript:void"><figure class="active"><img src="images/image-product-1.jpg" class="active carouselItem" alt="product1"></figure></a>
+        <a href="javascript:void"><figure><img src="images/image-product-2.jpg" height="100" class="carouselItem" alt="product2"></figure></a>
+        <a href="javascript:void"><figure><img src="images/image-product-3.jpg" height="100" class="carouselItem" alt="product3"></figure></a>
+        <a href="javascript:void"><figure><img src="images/image-product-4.jpg" height="100" class="carouselItem" alt="product4"></figure></a>
+      </div>
+    </div>
+  </div>
   <header>
     <div class="left-header">
       <a href="#" class="logo"><img src="images/logo.svg" alt="logo"></a>
@@ -53,7 +68,7 @@
   <!-- HERO SECTION -->
   <main id="hero">
     <!-- LEFT HERO SECTION -->
-    <div class="left">
+    <div class="left background-container">
       <div class="carousel-container">
         <img id="carouselImage" src="images/image-product-1.jpg" alt="carousel-image">
       </div>
