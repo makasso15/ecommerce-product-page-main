@@ -7,9 +7,9 @@ cart.addEventListener('click', function () {
 });
 
 // Change the image in the hero section and the image in the cart box
-const carouselImage = document.querySelector('#carouselImage');
-let cartItemImg = document.querySelector('.cart-item-img');
+let carouselImage = document.getElementById('carouselImage');
 let carouselItem = document.querySelectorAll('.carouselItem');
+let cartItemImg = document.querySelector('.cart-item-img');
 
 for (let i = 0; i < carouselItem.length; i++) {
     carouselItem[i].onclick = function () {
@@ -18,10 +18,10 @@ for (let i = 0; i < carouselItem.length; i++) {
         carouselItem[i].parentElement.classList.add('active');
         carouselItem[i].classList.add('active');
         if (carouselImage.src == carouselItem[i].src) {
-            for (let index = 0; index < carouselItem.length; index++) {
-                if (index != i) {
-                    carouselItem[index].parentElement.classList.remove('active');
-                    carouselItem[index].classList.remove('active');
+            for (let j = 0; j < carouselItem.length; j++) {
+                if (j != i) {
+                    carouselItem[j].parentElement.classList.remove('active');
+                    carouselItem[j].classList.remove('active');
                 }
             }
         }
@@ -37,15 +37,21 @@ let selected = document.querySelector('.selected');
 let cartItemNumber = document.querySelectorAll('.cartItemNumber');
 let currentPrice = document.getElementById('currentPrice');
 
+// if no item in the cart call the clear the cart 
+
+if (selected.innerText == 0) {
+    clearCart();
+}
+
 // update the cart item price
 function updatePrice() {
-    currentPrice.innerHTML = parseInt(selected.innerHTML) * 125;
+    currentPrice.innerText = parseInt(selected.innerText) * 125;
 }
 
 // update the cart item number
 function updateCartItem() {
     cartItemNumber.forEach(item => {
-        item.innerHTML = selected.innerHTML;
+        item.innerText = selected.innerText;
     });
 }
 
@@ -53,10 +59,10 @@ function updateCartItem() {
 function clearCart() {
     let empty = document.querySelector('.empty');
     empty.style.display = "block";
-    empty.innerHTML = "Your cart is empty";
+    empty.innerText = "Your cart is empty";
     document.querySelector('.cart-item').style.display = "none";
     document.querySelector('.checkout').style.display = "none";
-    selected.innerHTML = 0;
+    selected.innerText = 0;
     updateCartItem();
     updatePrice();
 
@@ -70,36 +76,30 @@ function feedCart() {
 }
 
 // increment function
-const increment = (event) => {
+function increment (event) {
     event.preventDefault();
     feedCart();
-    selected.innerHTML = parseInt(selected.innerHTML) + 1
+    selected.innerText = parseInt(selected.innerText) + 1
     updateCartItem();
     updatePrice();
 }
 
 // decrement function
-const decrement = (event) => {
+function decrement(event) {
     event.preventDefault();
-    selected.innerHTML = parseInt(selected.innerHTML) - 1;
+    selected.innerText = parseInt(selected.innerText) - 1;
     updateCartItem();
     updatePrice();
-    if (selected.innerHTML < 0 || selected.innerHTML == 0) {
+    if (selected.innerText < 0 || selected.innerText == 0) {
         clearCart();
     }
 }
-// delete all items by clicking the trash btn 
-remove.addEventListener('click', (event) => {
-    event.preventDefault();
-    let empty = document.querySelector('.empty');
-    empty.style.display = "block";
-    empty.innerHTML = "Your cart is empty";
-    document.querySelector('.cart-item').style.display = "none";
-    document.querySelector('.checkout').style.display = "none";
-    selected.innerHTML = 0;
-    updateCartItem();
-    updatePrice();
-});
+
+// call the increment and the decrement the number of items in the cart
 plus.addEventListener('click', increment);
 minus.addEventListener('click', decrement);
+
+// delete all items in the cart by clicking the trash btn 
+remove.addEventListener('click', clearCart);
+
 

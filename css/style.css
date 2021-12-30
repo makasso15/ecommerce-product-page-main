@@ -113,7 +113,7 @@ nav > ul > li > a:hover {
     border-radius: 1rem;
     top: 8%;
     right: 100px;
-    width: 300px;
+    width: 285px;
     visibility: hidden;
 }
 
@@ -201,6 +201,7 @@ nav > ul > li > a:hover {
 
 #hero {
     display: flex;
+    padding: 1rem 0;
 }
 
 #hero .left {
@@ -223,8 +224,7 @@ nav > ul > li > a:hover {
     border-radius: 1rem;
     cursor: zoom-in;
     transition: 0.6s;
-    height: 520px;
-
+    height: 540px;
 }
 
 .carousel-items {
@@ -235,25 +235,25 @@ nav > ul > li > a:hover {
     margin-top: 1rem;
 }
 
-.carousel-items > a > figure {
+.carousel-items > figure {
     border: 3px solid transparent;
-    border-radius: 10px;
+    border-radius: 12px;
+    cursor: pointer;
     overflow: hidden;
+    height: 100px;
 }
-.carousel-items > a > figure > img {
-    height: 120%;
+.carousel-items > figure > img {
+    height: 100%;
     width: 100%;
-    padding: 0;
-
 }
 
-.carousel-items > a > figure > img:hover,
-.carousel-items > a > figure > img.active {
-    opacity: 0.45;
+.carousel-items > figure > img:hover,
+.carousel-items > figure > img.active {
+    opacity: 0.40;
     transition: 0.3s;
 }
 
-.carousel-items > a > figure.active {
+.carousel-items > figure.active {
     border-color: var(--orange);
 
 }
@@ -274,7 +274,7 @@ nav > ul > li > a:hover {
 }
 
 .title {
-    width: 65%;
+    width: 80%;
     letter-spacing: 2px;
     font-size: 2.5rem;
     margin: 1rem 0;
@@ -282,7 +282,7 @@ nav > ul > li > a:hover {
 
 .text {
     color: var(--darkGrayishBlue);
-    width: 60%;
+    width: 80%;
     line-height: 1.5;
     margin: 1rem 0;
 }
@@ -350,7 +350,8 @@ nav > ul > li > a:hover {
     text-align: center;
     color: var(--white);
     background: var(--orange);
-    padding: 1.2rem 5rem;
+    padding: 15px 5rem;
+    line-height: 1.5;
     border-radius: 8px;
 }
 
@@ -361,7 +362,7 @@ nav > ul > li > a:hover {
 }
 
 .checkout-btn > img {
-    margin-right: 1rem;
+    margin-right: 10px;
 }
 
 /** Background **/
@@ -375,4 +376,29 @@ nav > ul > li > a:hover {
     background: rgba(29, 32, 37, 0.7);
     z-index: 9999;
     display: none;
+}
+
+/** MEDIA QUERIES **/
+
+@media  screen and (max-width: 768px) {
+
+    nav{
+        display: none;
+    }
+
+    #hero {
+        display: block;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+    
+    .right {
+        width: 100%;
+    }
 }
