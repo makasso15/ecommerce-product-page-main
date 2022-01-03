@@ -60,7 +60,7 @@ nav > ul > li::after {
     height: 3px;
     width: 0%;
     left: 0;
-    bottom: -65%;
+    bottom: -80%;
 }
 
 nav > ul > li:hover::after {
