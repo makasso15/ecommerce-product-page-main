@@ -13,18 +13,29 @@
 
 <body>
   <div id="background">
-    <span id="close-btn"><img src="./images/icon-close.svg" alt="close button"></span>
-    <span id="next-btn"><img src="./images/icon-next.svg" alt="next button"></span>
-    <span id="close-btn"><img src="./images/icon-previous.svg" alt="previous button"></span>
-    <div class="left background-container">
-      <div class="carousel-container">
-        <img src="images/image-product-1.jpg" alt="carousel-image">
-      </div>
-      <div class="carousel-items">
-        <a href="javascript:void"><figure class="active"><img src="images/image-product-1.jpg" class="active carouselItem" alt="product1"></figure></a>
-        <a href="javascript:void"><figure><img src="images/image-product-2.jpg" height="100" class="carouselItem" alt="product2"></figure></a>
-        <a href="javascript:void"><figure><img src="images/image-product-3.jpg" height="100" class="carouselItem" alt="product3"></figure></a>
-        <a href="javascript:void"><figure><img src="images/image-product-4.jpg" height="100" class="carouselItem" alt="product4"></figure></a>
+    <div class="container">
+      <span id="close-btn"><img src="./images/icon-close.svg" alt="close button"></span>
+      <span id="next-btn"><img src="./images/icon-next.svg" alt="next button"></span>
+      <span id="close-btn"><img src="./images/icon-previous.svg" alt="previous button"></span>
+      <div class="background-container">
+        <div class="carousel-container">
+          <img id="background-carousel-image" src="images/image-product-1.jpg" alt="carousel-image">
+        </div>
+        <div class="carousel-items">
+          <a href="javascript:void">
+            <figure class="active"><img src="images/image-product-1.jpg" height="100" class="active carouselItem" alt="product1">
+            </figure>
+          </a>
+          <a href="javascript:void">
+            <figure><img src="images/image-product-2.jpg" height="100" class="carouselItem" alt="product2"></figure>
+          </a>
+          <a href="javascript:void">
+            <figure><img src="images/image-product-3.jpg" height="100" class="carouselItem" alt="product3"></figure>
+          </a>
+          <a href="javascript:void">
+            <figure><img src="images/image-product-4.jpg" height="100" class="carouselItem" alt="product4"></figure>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -41,29 +52,34 @@
         </ul>
       </nav>
     </div>
-      <ul class="profil">
-        <li class="cart"><span class="cart-item-number cartItemNumber">0</span><a href="#"><svg class="cart-icon" width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg></a>  
-        </li>
-        <div class="cart-container">
-          <div class="cart-header">
-            <span>Cart</span>
+    <ul class="profil">
+      <li class="cart"><span class="cart-item-number cartItemNumber">0</span><a href="#"><svg class="cart-icon"
+            width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#69707D" fill-rule="nonzero" /></svg></a>
+      </li>
+      <div class="cart-container">
+        <div class="cart-header">
+          <span>Cart</span>
+        </div>
+        <div class="cart-item">
+          <img class="cart-item-img" src="images/image-product-1-thumbnail.jpg" height="50" alt="product1">
+          <div class="cart-item-info">
+            <span>Fall Edition Limited Sneakers</span>
+            <p><span>$125.00 x <span class="cartItemNumber">0</span> </span><strong>$<i
+                  id="currentPrice">0</i>.00</strong></p>
           </div>
-            <div class="cart-item">
-              <img class="cart-item-img" src="images/image-product-1-thumbnail.jpg" height="50" alt="product1">
-              <div class="cart-item-info">
-                <span>Fall Edition Limited Sneakers</span>
-                <p><span>$125.00 x <span class="cartItemNumber">0</span> </span><strong>$<i id="currentPrice">0</i>.00</strong></p>
-              </div>
-              <a href="javascript:void;" id="remove"><img src="images/icon-delete.svg" alt="delete"></a>
-            </div>    
-            <span class="empty"></span>
+          <a href="javascript:void;" id="remove"><img src="images/icon-delete.svg" alt="delete"></a>
+        </div>
+        <span class="empty"></span>
 
-            <div class="btn-container">
-              <a href="#" class="checkout">Checkout</a>
-            </div>
-        </div> 
-        <li><a href="#" class="avatar"><img src="images/image-avatar.png" height="50" alt="avatar"></a></li>
-      </ul>
+        <div class="btn-container">
+          <a href="#" class="checkout">Checkout</a>
+        </div>
+      </div>
+      <li><a href="#" class="avatar"><img src="images/image-avatar.png" height="50" alt="avatar"></a></li>
+    </ul>
   </header>
   <!-- HERO SECTION -->
   <main id="hero">
@@ -73,7 +89,8 @@
         <img id="carouselImage" src="images/image-product-1.jpg" alt="carousel-image">
       </div>
       <div class="carousel-items">
-        <figure class="active"><img src="images/image-product-1.jpg" class="active carouselItem" alt="product1"></figure>
+        <figure class="active"><img src="images/image-product-1.jpg" class="active carouselItem" alt="product1">
+        </figure>
         <figure><img src="images/image-product-2.jpg" class="carouselItem" alt="product2"></figure>
         <figure><img src="images/image-product-3.jpg" class="carouselItem" alt="product3"></figure>
         <figure><img src="images/image-product-4.jpg" class="carouselItem" alt="product4"></figure>
@@ -85,7 +102,7 @@
       <h1 class="title">Fall Limited Edition Sneakers</h1>
       <p class="text">
         These low-profile sneakers are your perfect casual wear companion. Featuring a
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
       </p>
       <div class="pricing">
         <p><span class="price">$125.00</span> <span class="reduction">50%</span></p>
@@ -95,7 +112,7 @@
         <div class="quantity">
           <a id="minus" href="#"><img src="images/icon-minus.svg" alt="minus"></a>
           <span class="selected">0</span>
-          <a id ="plus" href="#"><img src="images/icon-plus.svg" alt="plus"></a>
+          <a id="plus" href="#"><img src="images/icon-plus.svg" alt="plus"></a>
         </div>
         <a href="#" class="checkout-btn">
           <img src="images/icon-cart2.svg" alt="cart">
@@ -105,6 +122,7 @@
     </div>
   </main>
   <script src="js/index.js"></script>
+  <script src="./js/exercice.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 // Show the cart content
 const cart = document.querySelector('.cart');
-const cart_container = document.querySelector('.cart-container');
+const cartContainer = document.querySelector('.cart-container');
 
 cart.addEventListener('click', function () {
-    cart_container.classList.toggle('show');
+    cartContainer.classList.toggle('show');
 });
 
 // Change the image in the hero section and the image in the cart box
@@ -29,7 +29,6 @@ for (let i = 0; i < carouselItem.length; i++) {
 }
 
 // increment/decrement the cart item number and price
-
 const plus = document.getElementById('plus');
 const minus = document.getElementById('minus');
 const remove = document.getElementById('remove');
@@ -75,7 +74,7 @@ function feedCart() {
     document.querySelector('.checkout').style.display = null;
 }
 
-// increment function
+// increment cart item number
 function increment (event) {
     event.preventDefault();
     feedCart();
@@ -84,7 +83,7 @@ function increment (event) {
     updatePrice();
 }
 
-// decrement function
+// decrement cart item number
 function decrement(event) {
     event.preventDefault();
     selected.innerText = parseInt(selected.innerText) - 1;
@@ -95,11 +94,17 @@ function decrement(event) {
     }
 }
 
-// call the increment and the decrement the number of items in the cart
+// call the increment and the decrement functions
 plus.addEventListener('click', increment);
 minus.addEventListener('click', decrement);
 
 // delete all items in the cart by clicking the trash btn 
 remove.addEventListener('click', clearCart);
 
+// Display the background with the cart item image
+let background = document.getElementById('background');
+let backgroundCarouselImage = document.getElementById('background-carousel-image');
 
+carouselImage.addEventListener('click', () => {
+    background.style.display = "block";
+});
