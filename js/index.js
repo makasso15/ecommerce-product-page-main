@@ -104,7 +104,3 @@ remove.addEventListener('click', clearCart);
 // Display the background with the cart item image
 let background = document.getElementById('background');
 let backgroundCarouselImage = document.getElementById('background-carousel-image');
-
-carouselImage.addEventListener('click', () => {
-    background.style.display = "block";
-});
